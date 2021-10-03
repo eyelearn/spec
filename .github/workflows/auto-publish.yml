@@ -1,3 +1,4 @@
+# Create a file called .github/workflows/auto-publish.yml
 name: CI
 on:
   pull_request: {}
@@ -8,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: w3c/spec-prod@v2
-          with:
-            TOOLCHAIN: bikeshed
-            GH_PAGES_BRANCH: gh-pages
+        with:
+          TOOLCHAIN: bikeshed
+          GH_PAGES_BRANCH: gh-pages
