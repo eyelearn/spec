@@ -1,7 +1,7 @@
 <pre class=metadata>
-Title: Eyelearn external API
-Shortname: IndexedDB
-Abstract: Dieses Dokument definiert die gesamte API die eylearn für Partner zu verfügung stellt
+Title: eyelearn-External API
+Shortname: eyelearn-Specs
+Abstract: Dieses Dokument definiert die gesamte API die eylearn für Partner zu verfügung stellt. Sie ist unter GNU v2 lizensiert.
 Status: LS
 Editor: Sebastian Krüger
 Repository: eyelearn/spec
@@ -12,9 +12,32 @@ Markup Shorthands: css no, markdown yes
 [data-fill-with="conformance"], [data-fill-with="copyright"] {
     display: none;
 }
+a[href="#conformance"] {
+    display: none !important;
+}
 </style>
 
 # External Login
 ## Version 1
+
+<div class="note">
+  Sämtliche Dinge die hier beschrieben werden müssen ***serverseitig*** passieren. Alles andere ist ein Sicherheitsrisiko!
+</div>
+
+### Statische Daten
+Es werden verschiedene Daten benötigt. Diese sind:
+
+Ein <dfn>secret</dfn> dieses sollte nicht im code hardgecoded werden und darf nicht öffentlich verfügbar sein!
+
+
+
+# Testing
+Das [=secret=] ist toll!
+
+
+
+
+
+
 
 # Webhooks
