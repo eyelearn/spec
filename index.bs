@@ -2,7 +2,8 @@
 Title: Eyelearn external API
 Shortname: IndexedDB
 Abstract: Dieses Dokument definiert die gesamte API die eylearn für Partner zu verfügung stellt
-ED: https://w3c.github.io/IndexedDB/
+Status: LS
+LS: https://w3c.github.io/IndexedDB/
 Editor: Sebastian Krüger
 Repository: eyelearn/spec
 Markup Shorthands: css no, markdown yes
