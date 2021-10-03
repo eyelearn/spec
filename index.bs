@@ -8,5 +8,13 @@ Repository: eyelearn/spec
 Markup Shorthands: css no, markdown yes
 </pre>
 
+<style>
+[data-fill-with="conformance"], [data-fill-with="copyright"] {
+    display: none;
+}
+</style>
 
-first content - test
+# External Login
+## Version 1
+
+# Webhooks
