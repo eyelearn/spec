@@ -6,16 +6,10 @@ Status: LS
 Editor: Sebastian Krüger
 Repository: eyelearn/spec
 Markup Shorthands: css no, markdown yes
+Status Text: Dies ist der Satatus Text
+Group: webapps
+copyright: Lizensiert unter GNU v2. (c) eyelearn GmbH 2020-2021
 </pre>
-
-<style>
-[data-fill-with="conformance"], [data-fill-with="copyright"] {
-    display: none;
-}
-a[href="#conformance"] {
-    display: none !important;
-}
-</style>
 
 # External Login
 ## Version 1
