@@ -6,8 +6,7 @@ Status: LS
 Editor: Sebastian Krüger
 Repository: eyelearn/spec
 Markup Shorthands: css no, markdown yes
-Status Text: Dies ist der Satatus Text
-Group: webapps
+Status Text: Dies ist der Status Text
 </pre>
 
 # External Login
