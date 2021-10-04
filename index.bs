@@ -8,7 +8,6 @@ Repository: eyelearn/spec
 Markup Shorthands: css no, markdown yes
 Status Text: Dies ist der Satatus Text
 Group: webapps
-copyright: Lizensiert unter GNU v2. (c) eyelearn GmbH 2020-2021
 </pre>
 
 # External Login
