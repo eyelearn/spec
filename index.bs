@@ -1,32 +1,105 @@
 <pre class=metadata>
 Title: eyelearn-External API
 Shortname: eyelearn-Specs
-Abstract: Dieses Dokument definiert die gesamte API die eylearn für Partner zu verfügung stellt. Sie ist unter GNU v2 lizensiert.
-Status: LS
-Editor: Sebastian Krüger
+Abstract: Dieses Dokument definiert die gesamte API die eylearn für Partner zu verfügung stellt. Es enthält code Besispiele in PHP und für NodeJS oder Deno.
+URL: https://eyelearn.github.io/spec/
+Level: none
+Favicon : https://eyesee.eyelearn.at/service/img/cropped-Icon-192x192.png
+Status: LD
+Editor: eyelearn
 Repository: eyelearn/spec
 Markup Shorthands: css no, markdown yes
-Status Text: Dies ist der Status Text
-Local Boilerplate: copyright yes, conformance yes
+Default Highlight: PHP
+Line Numbers: on
+Include Can I Use Panels: on
+Indent: 2
+Local Boilerplate: copyright yes, footer yes
 </pre>
 
+
+<h2 class='no-num no-toc no-ref' id='status'>Status</h2>
+Dieses Dokument enthält stets die aktuellste Version. Es werden für jeden Partner nur bestimmte Inhalte relevant sein. Wir haben 2 Bereiche
+
+1. External Login
+1. Webhooks
+
+Bei beiden bieten wir verschiedene Varianten + Versionen an wobei neu implementierungen stets von einer Variante die neuste Version einzubinden haben. Man erhält aus Variante + Versionsnummer eine eindeutig definierte Variante z.B. 3-8 für Variante 3 Version 8.
+Wir haben in diesem Dokument immer nur die neuste Version + evtl. eine Version die sich grade in erpobung / tests befindet. 
+
+# Begriffe
+
+Mit <dfn>Server</dfn> ist sämtliche Infrastruktur bezeichnet auf den der Endnutzer keinen direkten Zugang hat. Dies schließt Datenbanken, API's und Dockercontainer mit ein.
+
+Mit <dfn>Client</dfn> ist der Browser des Endnutzer gemeint.
+
+Eine <dfn>.env Datei</dfn> ist eine Textdatei nach dem Format von [dieser NodeJS Bibliothek](https://github.com/motdotla/dotenv/blob/master/README.md#rules). Es gibt Bibliotheken für dieses Format für sämtliche Programmiersprachen.
+
+
+# Wichtige Hinweise:
+<div class="advisement">
+  Sämtliche Dinge die hier beschrieben werden müssen sofern nicht anders angegeben **serverseitig** passieren! Alles andere ist ein Sicherheitsrisiko!
+</div>
+
+## Speicherung von Secrets
+Es muss sich überlegt werden wie die Secrets gespeichert werden:
+
+1. Die secrets müssen auf dem [=Server=] gespeichert werden und dürfen nicht an den [=Client=] kommen!
+1. Wenn möglich die secrets nicht im Versionskontrollsystem ablegen!
+
+Wir empfehlen eine config Datei. Dabei sind folgende Varianten möglich:
+1. Eine [=.env Datei=] die vom [=Server=] ausgelesen wird
+1. Z.B. eine php Datei nur mit secrets
+1. Speichern in einer Datenbank ist auch eine Möglichkeit.
+
+
+
 # External Login
-## Version 1
+## Partner-Managed (Variante 1-1)
+
+TODO: Was? Wofür?
+
+### Umsetungsmöglichkeiten
+Es gibt 2 Möglichkeiten wie das auf Partner Seite umgesetzt werden kann:
+
+1. Es wird ein IFrame eingebaut, dass auf eine bestimmte [=URL=] zeigt.
+1. Ein Button auf dessen klick sich ein (neuer?) Tab öffnet in dem man bei eyelearn eingeloggt ist.
 
 <div class="note">
-  Sämtliche Dinge die hier beschrieben werden müssen ***serverseitig*** passieren. Alles andere ist ein Sicherheitsrisiko!
+  Bei Möglichkeit 1 ist der Nutzer danach wenn er in einem anderen Tab auf [https://eyesee.eyelearn.at](https://eyesee.eyelearn.at) NICHT eingeloggt. Bei Möglichkeit 2 ist der das schon. Dies liegt an dem doublekey-Prinzip das Browser nutzen [Firefox Bug zu dem Thema](https://bugzilla.mozilla.org/show_bug.cgi?id=565965)
 </div>
+
+
 
 ### Statische Daten
 Es werden verschiedene Daten benötigt. Diese sind:
 
-Ein <dfn>secret</dfn> dieses sollte nicht im code hardgecoded werden und darf nicht öffentlich verfügbar sein!
+Ein <dfn>secret</dfn> siehe für dieses UNBEDINGT die Sicheheitshinweise. Dieses wird von eyelearn im Base64 format übermittelt. In Datenbanken sollte ein String Feld mit Länge von 100 bereitgestellt werden. (Länge ist ein kleines bisschen weniger).
+
+Die <dfn>masterID</dfn> die sowas wie die "Partnernummer" ist.
+
+Die <dfn>version</dfn> diese ist aktuell `1`. Diese Information sollte hardgecoded werden!
+
+Und den [=Origin=] auf dem die Seite läuft.
+
+<div class="note">
+  Gibt es mehere Seiten ([=Origins=]) auf dem das eingerichtet werden soll (z.B. ein Testserver) sind dort [=masterID=] und [=secret=] anders, da diese nur für den entsprechenden [=Origin=] gelten!
+</div>
+
+### Nutzerdaten
+
+Um das Einloggen zu ermöglichen ist dem Nutzer der sich einloggen will vorher ein eyelearn Nutzername zuzuorden.
+
+Wie diese Zuordnung passiert liegt im ermessen des Partners. Wichtig ist dabei nur:
+
+1. Nicht jeder eyelearnNutzer muss einen korrespondieren Partnersystem-Nutzer haben.
+1. Nicht jeder Partnersystem-Nutzer muss ein korrespondieren eyelearnNutzer haben.
+
+Wir empfehlen 2 Varianten diese Daten zu speichern:
+1. Ein feld eyelearn von typ String (mit max-Länge min 100 Zeichen)
+1. Eine extra Tabelle die das mapping vornimmt.
 
 
-
-# Testing
-Das [=secret=] ist toll!
-
+### URL-Generierung
 
 
 
