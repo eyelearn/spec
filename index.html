@@ -1488,7 +1488,9 @@ Possible extra rowspan handling
 	}
 </style>
   <meta content="Bikeshed version a210b7d86, updated Thu Sep 16 13:45:19 2021 -0700" name="generator">
-  <meta content="4bc84dc7edc4f595df308025b928e5f3a36b4785" name="document-revision">
+  <link href="https://eyelearn.github.io/spec/" rel="canonical">
+  <link href="https://eyesee.eyelearn.at/service/img/cropped-Icon-192x192.png" rel="icon">
+  <meta content="05983e87a02e711c4f6b4ad39a5c40f7b8989375" name="document-revision">
 <style>/* style-autolinks */
 
 .css.css, .property.property, .descriptor.descriptor {
@@ -1792,6 +1794,65 @@ a.self-link::before            { content: "¶"; }
 .heading > a.self-link::before { content: "§"; }
 dfn > a.self-link::before      { content: "#"; }
 </style>
+<style>/* style-syntax-highlighting */
+
+code.highlight { padding: .1em; border-radius: .3em; }
+pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
+
+.highlight:not(.idl) { background: rgba(0, 0, 0, .03); }
+c-[a] { color: #990055 } /* Keyword.Declaration */
+c-[b] { color: #990055 } /* Keyword.Type */
+c-[c] { color: #708090 } /* Comment */
+c-[d] { color: #708090 } /* Comment.Multiline */
+c-[e] { color: #0077aa } /* Name.Attribute */
+c-[f] { color: #669900 } /* Name.Tag */
+c-[g] { color: #222222 } /* Name.Variable */
+c-[k] { color: #990055 } /* Keyword */
+c-[l] { color: #000000 } /* Literal */
+c-[m] { color: #000000 } /* Literal.Number */
+c-[n] { color: #0077aa } /* Name */
+c-[o] { color: #999999 } /* Operator */
+c-[p] { color: #999999 } /* Punctuation */
+c-[s] { color: #a67f59 } /* Literal.String */
+c-[t] { color: #a67f59 } /* Literal.String.Single */
+c-[u] { color: #a67f59 } /* Literal.String.Double */
+c-[cp] { color: #708090 } /* Comment.Preproc */
+c-[c1] { color: #708090 } /* Comment.Single */
+c-[cs] { color: #708090 } /* Comment.Special */
+c-[kc] { color: #990055 } /* Keyword.Constant */
+c-[kn] { color: #990055 } /* Keyword.Namespace */
+c-[kp] { color: #990055 } /* Keyword.Pseudo */
+c-[kr] { color: #990055 } /* Keyword.Reserved */
+c-[ld] { color: #000000 } /* Literal.Date */
+c-[nc] { color: #0077aa } /* Name.Class */
+c-[no] { color: #0077aa } /* Name.Constant */
+c-[nd] { color: #0077aa } /* Name.Decorator */
+c-[ni] { color: #0077aa } /* Name.Entity */
+c-[ne] { color: #0077aa } /* Name.Exception */
+c-[nf] { color: #0077aa } /* Name.Function */
+c-[nl] { color: #0077aa } /* Name.Label */
+c-[nn] { color: #0077aa } /* Name.Namespace */
+c-[py] { color: #0077aa } /* Name.Property */
+c-[ow] { color: #999999 } /* Operator.Word */
+c-[mb] { color: #000000 } /* Literal.Number.Bin */
+c-[mf] { color: #000000 } /* Literal.Number.Float */
+c-[mh] { color: #000000 } /* Literal.Number.Hex */
+c-[mi] { color: #000000 } /* Literal.Number.Integer */
+c-[mo] { color: #000000 } /* Literal.Number.Oct */
+c-[sb] { color: #a67f59 } /* Literal.String.Backtick */
+c-[sc] { color: #a67f59 } /* Literal.String.Char */
+c-[sd] { color: #a67f59 } /* Literal.String.Doc */
+c-[se] { color: #a67f59 } /* Literal.String.Escape */
+c-[sh] { color: #a67f59 } /* Literal.String.Heredoc */
+c-[si] { color: #a67f59 } /* Literal.String.Interpol */
+c-[sx] { color: #a67f59 } /* Literal.String.Other */
+c-[sr] { color: #a67f59 } /* Literal.String.Regex */
+c-[ss] { color: #a67f59 } /* Literal.String.Symbol */
+c-[vc] { color: #0077aa } /* Name.Variable.Class */
+c-[vg] { color: #0077aa } /* Name.Variable.Global */
+c-[vi] { color: #0077aa } /* Name.Variable.Instance */
+c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
+</style>
 <style>/* style-darkmode */
 
 @media (prefers-color-scheme: dark) {
@@ -1912,60 +1973,206 @@ dfn > a.self-link::before      { content: "#"; }
         --selflink-hover-text: white;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --dfnpanel-bg: #222;
+        --dfnpanel-text: var(--text);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .highlight:not(.idl) { background: rgba(255, 255, 255, .05); }
+
+    c-[a] { color: #d33682 } /* Keyword.Declaration */
+    c-[b] { color: #d33682 } /* Keyword.Type */
+    c-[c] { color: #2aa198 } /* Comment */
+    c-[d] { color: #2aa198 } /* Comment.Multiline */
+    c-[e] { color: #268bd2 } /* Name.Attribute */
+    c-[f] { color: #b58900 } /* Name.Tag */
+    c-[g] { color: #cb4b16 } /* Name.Variable */
+    c-[k] { color: #d33682 } /* Keyword */
+    c-[l] { color: #657b83 } /* Literal */
+    c-[m] { color: #657b83 } /* Literal.Number */
+    c-[n] { color: #268bd2 } /* Name */
+    c-[o] { color: #657b83 } /* Operator */
+    c-[p] { color: #657b83 } /* Punctuation */
+    c-[s] { color: #6c71c4 } /* Literal.String */
+    c-[t] { color: #6c71c4 } /* Literal.String.Single */
+    c-[u] { color: #6c71c4 } /* Literal.String.Double */
+    c-[ch] { color: #2aa198 } /* Comment.Hashbang */
+    c-[cp] { color: #2aa198 } /* Comment.Preproc */
+    c-[cpf] { color: #2aa198 } /* Comment.PreprocFile */
+    c-[c1] { color: #2aa198 } /* Comment.Single */
+    c-[cs] { color: #2aa198 } /* Comment.Special */
+    c-[kc] { color: #d33682 } /* Keyword.Constant */
+    c-[kn] { color: #d33682 } /* Keyword.Namespace */
+    c-[kp] { color: #d33682 } /* Keyword.Pseudo */
+    c-[kr] { color: #d33682 } /* Keyword.Reserved */
+    c-[ld] { color: #657b83 } /* Literal.Date */
+    c-[nc] { color: #268bd2 } /* Name.Class */
+    c-[no] { color: #268bd2 } /* Name.Constant */
+    c-[nd] { color: #268bd2 } /* Name.Decorator */
+    c-[ni] { color: #268bd2 } /* Name.Entity */
+    c-[ne] { color: #268bd2 } /* Name.Exception */
+    c-[nf] { color: #268bd2 } /* Name.Function */
+    c-[nl] { color: #268bd2 } /* Name.Label */
+    c-[nn] { color: #268bd2 } /* Name.Namespace */
+    c-[py] { color: #268bd2 } /* Name.Property */
+    c-[ow] { color: #657b83 } /* Operator.Word */
+    c-[mb] { color: #657b83 } /* Literal.Number.Bin */
+    c-[mf] { color: #657b83 } /* Literal.Number.Float */
+    c-[mh] { color: #657b83 } /* Literal.Number.Hex */
+    c-[mi] { color: #657b83 } /* Literal.Number.Integer */
+    c-[mo] { color: #657b83 } /* Literal.Number.Oct */
+    c-[sa] { color: #6c71c4 } /* Literal.String.Affix */
+    c-[sb] { color: #6c71c4 } /* Literal.String.Backtick */
+    c-[sc] { color: #6c71c4 } /* Literal.String.Char */
+    c-[dl] { color: #6c71c4 } /* Literal.String.Delimiter */
+    c-[sd] { color: #6c71c4 } /* Literal.String.Doc */
+    c-[se] { color: #6c71c4 } /* Literal.String.Escape */
+    c-[sh] { color: #6c71c4 } /* Literal.String.Heredoc */
+    c-[si] { color: #6c71c4 } /* Literal.String.Interpol */
+    c-[sx] { color: #6c71c4 } /* Literal.String.Other */
+    c-[sr] { color: #6c71c4 } /* Literal.String.Regex */
+    c-[ss] { color: #6c71c4 } /* Literal.String.Symbol */
+    c-[fm] { color: #268bd2 } /* Name.Function.Magic */
+    c-[vc] { color: #cb4b16 } /* Name.Variable.Class */
+    c-[vg] { color: #cb4b16 } /* Name.Variable.Global */
+    c-[vi] { color: #cb4b16 } /* Name.Variable.Instance */
+    c-[vm] { color: #cb4b16 } /* Name.Variable.Magic */
+    c-[il] { color: #657b83 } /* Literal.Number.Integer.Long */
+}
 </style>
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">eyelearn-External API</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2021-10-04">4 October 2021</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2021-10-05">5 October 2021</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
+     <dt>This version:
+     <dd><a class="u-url" href="https://eyelearn.github.io/spec/">https://eyelearn.github.io/spec/</a>
      <dt>Issue Tracking:
      <dd><a href="https://github.com/eyelearn/spec/issues/">GitHub</a>
      <dt class="editor">Editor:
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Sebastian Krüger</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">eyelearn</span>
     </dl>
    </div>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright">Lizensiert unter GNU v2. (c) eyelearn GmbH 2020-2021</p>
+   <p class="copyright" data-fill-with="copyright">Copyright eyelearn GmbH. Dieses Dokument unterliegt dem Urheberrecht und darf ohne Einwilligung der Autoren nicht vervielfältigt werden. Fragen / Anmerkungen bitte über E-Mail. </p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>Dieses Dokument definiert die gesamte API die eylearn für Partner zu verfügung stellt. Sie ist unter GNU v2 lizensiert.</p>
+   <p>Dieses Dokument definiert die gesamte API die eylearn für Partner zu verfügung stellt. Es enthält code Besispiele in PHP und für NodeJS oder Deno.</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory">
+    <li><a href="#begriffe"><span class="secno">1</span> <span class="content">Begriffe</span></a>
     <li>
-     <a href="#external-login"><span class="secno">1</span> <span class="content">External Login</span></a>
+     <a href="#wichtige-hinweise"><span class="secno">2</span> <span class="content">Wichtige Hinweise:</span></a>
+     <ol class="toc">
+      <li><a href="#speicherung-von-secrets"><span class="secno">2.1</span> <span class="content">Speicherung von Secrets</span></a>
+     </ol>
+    <li>
+     <a href="#external-login"><span class="secno">3</span> <span class="content">External Login</span></a>
      <ol class="toc">
       <li>
-       <a href="#version-1"><span class="secno">1.1</span> <span class="content">Version 1</span></a>
+       <a href="#partner-managed-variante-1-1"><span class="secno">3.1</span> <span class="content">Partner-Managed (Variante 1-1)</span></a>
        <ol class="toc">
-        <li><a href="#statische-daten"><span class="secno">1.1.1</span> <span class="content">Statische Daten</span></a>
+        <li><a href="#umsetungsmglichkeiten"><span class="secno">3.1.1</span> <span class="content">Umsetungsmöglichkeiten</span></a>
+        <li><a href="#statische-daten"><span class="secno">3.1.2</span> <span class="content">Statische Daten</span></a>
+        <li><a href="#nutzerdaten"><span class="secno">3.1.3</span> <span class="content">Nutzerdaten</span></a>
+        <li><a href="#url-generierung"><span class="secno">3.1.4</span> <span class="content">URL-Generierung</span></a>
        </ol>
      </ol>
-    <li><a href="#testing"><span class="secno">2</span> <span class="content">Testing</span></a>
-    <li><a href="#webhooks"><span class="secno">3</span> <span class="content">Webhooks</span></a>
+    <li><a href="#webhooks"><span class="secno">4</span> <span class="content">Webhooks</span></a>
     <li>
      <a href="#index"><span class="secno"></span> <span class="content">Index</span></a>
      <ol class="toc">
       <li><a href="#index-defined-here"><span class="secno"></span> <span class="content">Terms defined by this specification</span></a>
+      <li><a href="#index-defined-elsewhere"><span class="secno"></span> <span class="content">Terms defined by reference</span></a>
+     </ol>
+    <li>
+     <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
+     <ol class="toc">
+      <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
      </ol>
    </ol>
   </nav>
   <main>
-   <h2 class="heading settled" data-level="1" id="external-login"><span class="secno">1. </span><span class="content">External Login</span><a class="self-link" href="#external-login"></a></h2>
-   <h3 class="heading settled" data-level="1.1" id="version-1"><span class="secno">1.1. </span><span class="content">Version 1</span><a class="self-link" href="#version-1"></a></h3>
-   <div class="note" role="note"> Sämtliche Dinge die hier beschrieben werden müssen *<strong>serverseitig</strong>* passieren. Alles andere ist ein Sicherheitsrisiko! </div>
-   <h4 class="heading settled" data-level="1.1.1" id="statische-daten"><span class="secno">1.1.1. </span><span class="content">Statische Daten</span><a class="self-link" href="#statische-daten"></a></h4>
+   <h2 class="no-num no-toc no-ref heading settled" id="status"><span class="content">Status</span></h2>
+    Dieses Dokument enthält stets die aktuellste Version. Es werden für jeden Partner nur bestimmte Inhalte relevant sein. Wir haben 2 Bereiche 
+   <ol>
+    <li data-md>
+     <p>External Login</p>
+    <li data-md>
+     <p>Webhooks</p>
+   </ol>
+   <p>Bei beiden bieten wir verschiedene Varianten + Versionen an wobei neu implementierungen stets von einer Variante die neuste Version einzubinden haben. Man erhält aus Variante + Versionsnummer eine eindeutig definierte Variante z.B. 3-8 für Variante 3 Version 8.
+Wir haben in diesem Dokument immer nur die neuste Version + evtl. eine Version die sich grade in erpobung / tests befindet.</p>
+   <h2 class="heading settled" data-level="1" id="begriffe"><span class="secno">1. </span><span class="content">Begriffe</span><a class="self-link" href="#begriffe"></a></h2>
+   <p>Mit <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="server">Server</dfn> ist sämtliche Infrastruktur bezeichnet auf den der Endnutzer keinen direkten Zugang hat. Dies schließt Datenbanken, API’s und Dockercontainer mit ein.</p>
+   <p>Mit <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="client">Client</dfn> ist der Browser des Endnutzer gemeint.</p>
+   <p>Eine <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="env-datei">.env Datei</dfn> ist eine Textdatei nach dem Format von <a href="https://github.com/motdotla/dotenv/blob/master/README.md#rules">dieser NodeJS Bibliothek</a>. Es gibt Bibliotheken für dieses Format für sämtliche Programmiersprachen.</p>
+   <h2 class="heading settled" data-level="2" id="wichtige-hinweise"><span class="secno">2. </span><span class="content">Wichtige Hinweise:</span><a class="self-link" href="#wichtige-hinweise"></a></h2>
+   <div class="advisement"> Sämtliche Dinge die hier beschrieben werden müssen sofern nicht anders angegeben <strong>serverseitig</strong> passieren! Alles andere ist ein Sicherheitsrisiko! </div>
+   <h3 class="heading settled" data-level="2.1" id="speicherung-von-secrets"><span class="secno">2.1. </span><span class="content">Speicherung von Secrets</span><a class="self-link" href="#speicherung-von-secrets"></a></h3>
+    Es muss sich überlegt werden wie die Secrets gespeichert werden: 
+   <ol>
+    <li data-md>
+     <p>Die secrets müssen auf dem <a data-link-type="dfn" href="#server" id="ref-for-server">Server</a> gespeichert werden und dürfen nicht an den <a data-link-type="dfn" href="#client" id="ref-for-client">Client</a> kommen!</p>
+    <li data-md>
+     <p>Wenn möglich die secrets nicht im Versionskontrollsystem ablegen!</p>
+   </ol>
+   <p>Wir empfehlen eine config Datei. Dabei sind folgende Varianten möglich:</p>
+   <ol>
+    <li data-md>
+     <p>Eine <a data-link-type="dfn" href="#env-datei" id="ref-for-env-datei">.env Datei</a> die vom <a data-link-type="dfn" href="#server" id="ref-for-server①">Server</a> ausgelesen wird</p>
+    <li data-md>
+     <p>Z.B. eine php Datei nur mit secrets</p>
+    <li data-md>
+     <p>Speichern in einer Datenbank ist auch eine Möglichkeit.</p>
+   </ol>
+   <h2 class="heading settled" data-level="3" id="external-login"><span class="secno">3. </span><span class="content">External Login</span><a class="self-link" href="#external-login"></a></h2>
+   <h3 class="heading settled" data-level="3.1" id="partner-managed-variante-1-1"><span class="secno">3.1. </span><span class="content">Partner-Managed (Variante 1-1)</span><a class="self-link" href="#partner-managed-variante-1-1"></a></h3>
+   <p>TODO: Was? Wofür?</p>
+   <h4 class="heading settled" data-level="3.1.1" id="umsetungsmglichkeiten"><span class="secno">3.1.1. </span><span class="content">Umsetungsmöglichkeiten</span><a class="self-link" href="#umsetungsmglichkeiten"></a></h4>
+    Es gibt 2 Möglichkeiten wie das auf Partner Seite umgesetzt werden kann: 
+   <ol>
+    <li data-md>
+     <p>Es wird ein IFrame eingebaut, dass auf eine bestimmte <a data-link-type="dfn" href="https://w3c.github.io/webappsec-csp/#violation-url" id="ref-for-violation-url">URL</a> zeigt.</p>
+    <li data-md>
+     <p>Ein Button auf dessen klick sich ein (neuer?) Tab öffnet in dem man bei eyelearn eingeloggt ist.</p>
+   </ol>
+   <div class="note" role="note"> Bei Möglichkeit 1 ist der Nutzer danach wenn er in einem anderen Tab auf <a href="https://eyesee.eyelearn.at">https://eyesee.eyelearn.at</a> NICHT eingeloggt. Bei Möglichkeit 2 ist der das schon. Dies liegt an dem doublekey-Prinzip das Browser nutzen <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=565965">Firefox Bug zu dem Thema</a> </div>
+   <h4 class="heading settled" data-level="3.1.2" id="statische-daten"><span class="secno">3.1.2. </span><span class="content">Statische Daten</span><a class="self-link" href="#statische-daten"></a></h4>
     Es werden verschiedene Daten benötigt. Diese sind: 
-   <p>Ein <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="secret">secret</dfn> dieses sollte nicht im code hardgecoded werden und darf nicht öffentlich verfügbar sein!</p>
-   <h2 class="heading settled" data-level="2" id="testing"><span class="secno">2. </span><span class="content">Testing</span><a class="self-link" href="#testing"></a></h2>
-    Das <a data-link-type="dfn" href="#secret" id="ref-for-secret">secret</a> ist toll! 
-   <h2 class="heading settled" data-level="3" id="webhooks"><span class="secno">3. </span><span class="content">Webhooks</span><a class="self-link" href="#webhooks"></a></h2>
+   <p>Ein <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="secret">secret</dfn> siehe für dieses UNBEDINGT die Sicheheitshinweise. Dieses wird von eyelearn im Base64 format übermittelt. In Datenbanken sollte ein String Feld mit Länge von 100 bereitgestellt werden. (Länge ist ein kleines bisschen weniger).</p>
+   <p>Die <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="masterid">masterID</dfn> die sowas wie die "Partnernummer" ist.</p>
+   <p>Die <dfn data-dfn-type="dfn" data-noexport id="version">version<a class="self-link" href="#version"></a></dfn> diese ist aktuell <code class="highlight">1</code>. Diese Information sollte hardgecoded werden!</p>
+   <p>Und den <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-document-origin" id="ref-for-concept-document-origin">Origin</a> auf dem die Seite läuft.</p>
+   <div class="note" role="note"> Gibt es mehere Seiten (<a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-document-origin" id="ref-for-concept-document-origin①">Origins</a>) auf dem das eingerichtet werden soll (z.B. ein Testserver) sind dort <a data-link-type="dfn" href="#masterid" id="ref-for-masterid">masterID</a> und <a data-link-type="dfn" href="#secret" id="ref-for-secret">secret</a> anders, da diese nur für den entsprechenden <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-document-origin" id="ref-for-concept-document-origin②">Origin</a> gelten! </div>
+   <h4 class="heading settled" data-level="3.1.3" id="nutzerdaten"><span class="secno">3.1.3. </span><span class="content">Nutzerdaten</span><a class="self-link" href="#nutzerdaten"></a></h4>
+   <p>Um das Einloggen zu ermöglichen ist dem Nutzer der sich einloggen will vorher ein eyelearn Nutzername zuzuorden.</p>
+   <p>Wie diese Zuordnung passiert liegt im ermessen des Partners. Wichtig ist dabei nur:</p>
+   <ol>
+    <li data-md>
+     <p>Nicht jeder eyelearnNutzer muss einen korrespondieren Partnersystem-Nutzer haben.</p>
+    <li data-md>
+     <p>Nicht jeder Partnersystem-Nutzer muss ein korrespondieren eyelearnNutzer haben.</p>
+   </ol>
+   <p>Wir empfehlen 2 Varianten diese Daten zu speichern:</p>
+   <ol>
+    <li data-md>
+     <p>Ein feld eyelearn von typ String (mit max-Länge min 100 Zeichen)</p>
+    <li data-md>
+     <p>Eine extra Tabelle die das mapping vornimmt.</p>
+   </ol>
+   <h4 class="heading settled" data-level="3.1.4" id="url-generierung"><span class="secno">3.1.4. </span><span class="content">URL-Generierung</span><a class="self-link" href="#url-generierung"></a></h4>
+   <h2 class="heading settled" data-level="4" id="webhooks"><span class="secno">4. </span><span class="content">Webhooks</span><a class="self-link" href="#webhooks"></a></h2>
   </main>
 <script>
 (function() {
@@ -2099,12 +2306,74 @@ dfn > a.self-link::before      { content: "#"; }
   <h2 class="no-num no-ref heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
   <h3 class="no-num no-ref heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
   <ul class="index">
-   <li><a href="#secret">secret</a><span>, in § 1.1.1</span>
+   <li><a href="#client">Client</a><span>, in § 1</span>
+   <li><a href="#env-datei">.env Datei</a><span>, in § 1</span>
+   <li><a href="#masterid">masterID</a><span>, in § 3.1.2</span>
+   <li><a href="#secret">secret</a><span>, in § 3.1.2</span>
+   <li><a href="#server">Server</a><span>, in § 1</span>
+   <li><a href="#version">version</a><span>, in § 3.1.2</span>
   </ul>
+  <aside class="dfn-panel" data-for="term-for-violation-url">
+   <a href="https://w3c.github.io/webappsec-csp/#violation-url">https://w3c.github.io/webappsec-csp/#violation-url</a><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-violation-url">3.1.1. Umsetungsmöglichkeiten</a>
+   </ul>
+  </aside>
+  <aside class="dfn-panel" data-for="term-for-concept-document-origin">
+   <a href="https://dom.spec.whatwg.org/#concept-document-origin">https://dom.spec.whatwg.org/#concept-document-origin</a><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-concept-document-origin">3.1.2. Statische Daten</a> <a href="#ref-for-concept-document-origin①">(2)</a> <a href="#ref-for-concept-document-origin②">(3)</a>
+   </ul>
+  </aside>
+  <h3 class="no-num no-ref heading settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
+  <ul class="index">
+   <li>
+    <a data-link-type="biblio">[CSP3]</a> defines the following terms:
+    <ul>
+     <li><span class="dfn-paneled" id="term-for-violation-url">url</span>
+    </ul>
+   <li>
+    <a data-link-type="biblio">[DOM]</a> defines the following terms:
+    <ul>
+     <li><span class="dfn-paneled" id="term-for-concept-document-origin">origin</span>
+    </ul>
+  </ul>
+  <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
+  <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
+  <dl>
+   <dt id="biblio-csp3">[CSP3]
+   <dd>Mike West. <a href="https://www.w3.org/TR/CSP3/"><cite>Content Security Policy Level 3</cite></a>. 29 June 2021. WD. URL: <a href="https://www.w3.org/TR/CSP3/">https://www.w3.org/TR/CSP3/</a>
+   <dt id="biblio-dom">[DOM]
+   <dd>Anne van Kesteren. <a href="https://dom.spec.whatwg.org/"><cite>DOM Standard</cite></a>. Living Standard. URL: <a href="https://dom.spec.whatwg.org/">https://dom.spec.whatwg.org/</a>
+  </dl>
+  <aside class="dfn-panel" data-for="server">
+   <b><a href="#server">#server</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-server">2.1. Speicherung von Secrets</a> <a href="#ref-for-server①">(2)</a>
+   </ul>
+  </aside>
+  <aside class="dfn-panel" data-for="client">
+   <b><a href="#client">#client</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-client">2.1. Speicherung von Secrets</a>
+   </ul>
+  </aside>
+  <aside class="dfn-panel" data-for="env-datei">
+   <b><a href="#env-datei">#env-datei</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-env-datei">2.1. Speicherung von Secrets</a>
+   </ul>
+  </aside>
   <aside class="dfn-panel" data-for="secret">
    <b><a href="#secret">#secret</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-secret">2. Testing</a>
+    <li><a href="#ref-for-secret">3.1.2. Statische Daten</a>
+   </ul>
+  </aside>
+  <aside class="dfn-panel" data-for="masterid">
+   <b><a href="#masterid">#masterid</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-masterid">3.1.2. Statische Daten</a>
    </ul>
   </aside>
 <script>/* script-dfn-panel */
